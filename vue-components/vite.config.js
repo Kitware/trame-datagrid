@@ -15,7 +15,7 @@ export default {
         },
       },
     },
-    outDir: "../trame_datagrid/module/serve",
+    outDir: "../trame_datagrid/module/datagrid/serve",
     assetsDir: ".",
   },
 };
