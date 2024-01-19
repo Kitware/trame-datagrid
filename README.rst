@@ -4,8 +4,7 @@ trame-datagrid
 
 Trame widget of the `RevoGrid <https://revolist.github.io/revogrid/>`_ component for vue3.
 
-.. image:: docs/trame-datagrid.png
-  :width: 400
+.. image:: https://raw.githubusercontent.com/Kitware/trame-datagrid/master/docs/trame-datagrid.png
   :alt: Example with fake data of what it looks like
 
 License
