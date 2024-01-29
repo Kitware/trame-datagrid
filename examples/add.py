@@ -4,6 +4,8 @@ from trame.app import get_server
 from trame.widgets import vuetify3, datagrid
 from trame.ui.vuetify3 import SinglePageLayout
 
+from trame_server import __version__ as server_version
+
 from faker import Faker
 
 FAKE_DATA = Faker()
@@ -96,10 +98,15 @@ class SpreadSheetExample:
     def dirty_rows(self, event):
         """Just to overcome the dirty bug to client cache"""
         if event.get("order") is None:
-            original = self.state.rows
-            with self.state:
-                self.state.rows = []
-            self.state.rows = original
+            if server_version.startswith("2.16"):
+                print("new fashion")
+                self.server.force_state_push("rows")
+            else:
+                print("old fashion")
+                original = self.state.rows
+                with self.state:
+                    self.state.rows = []
+                self.state.rows = original
 
     def _build_ui(self):
         with SinglePageLayout(self.server, full_height=True) as layout:
