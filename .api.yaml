@@ -62,7 +62,7 @@ trame_datagrid:
               Row class property Define this property in rgRow object and this will be mapped as rgRow class string ''
           - name: row_definitions
             help: > 
-              Row properies applied RowDefinition[] []
+              Row properties applied RowDefinition[] []
           - name: row_headers
             help: > 
               Excel like show rgRow indexe per rgRow RowHeaders \| boolean undefined

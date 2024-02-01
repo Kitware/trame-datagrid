@@ -87,6 +87,8 @@ class VGrid(HtmlElement):
     :param use_clipboard: use-clipboard When true enable clipboard. boolean true
     """
 
+    _next_id = 0
+
     def __init__(self, children=None, **kwargs):
         super().__init__("v-grid", children, **kwargs)
         self._attr_names += [
@@ -144,6 +146,53 @@ class VGrid(HtmlElement):
             ("row_order_changed", "roworderchanged"),
             ("viewport_scroll", "viewportscroll"),
         ]
+        VGrid._next_id += 1
+        self.__ref = kwargs.get("ref", f"VGrid_{VGrid._next_id}")
+        self._attributes["ref"] = f'ref="{self.__ref}"'
+
+    @property
+    def ref(self):
+        return self.__ref
+
+    def add_trimmed(self, *args):
+        """Add trimmed by type (trimmed: Record<number, boolean>, trimmedType?: string, type?: RevoGrid.DimensionRows)"""
+        self.server.js_call(self.ref, "addTrimmed", *args)
+
+    def clear_focus(self, *args):
+        """Clear current grid focus"""
+        self.server.js_call(self.ref, "clearFocus", *args)
+
+    def refresh(self, *args):
+        """Refreshes data viewport. Can be specific part as rgRow or pinned rgRow or 'all' by default. refresh(type?: RevoGrid.DimensionRows | 'all') => Promise<void>"""
+        self.server.js_call(self.ref, "refresh", *args)
+
+    def scroll_to_column_index(self, *args):
+        """Scrolls view port to specified column index"""
+        self.server.js_call(self.ref, "scrollToColumnIndex", *args)
+
+    def scroll_to_column_prop(self, *args):
+        """Scrolls view port to specified column prop"""
+        self.server.js_call(self.ref, "scrollToColumnProp", *args)
+
+    def scroll_to_coordinate(self, *args):
+        """Scrolls view port to coordinate"""
+        self.server.js_call(self.ref, "scrollToCoordinate", *args)
+
+    def scroll_to_row(self, *args):
+        """Scrolls view port to specified rgRow index"""
+        self.server.js_call(self.ref, "scrollToRow", *args)
+
+    def set_cell_edit(self, *args):
+        """Bring cell to edit mode (rgRow: number, prop: RevoGrid.ColumnProp, rowSource?: RevoGrid.DimensionRows)"""
+        self.server.js_call(self.ref, "setCellEdit", *args)
+
+    def update_column_sorting(self, *args):
+        """Update column sorting (column: RevoGrid.ColumnRegular, index: number, order: asc/desc)"""
+        self.server.js_call(self.ref, "updateColumnSorting", *args)
+
+    def update_columns(self, *args):
+        """Update columns (cols: RevoGrid.ColumnRegular[])"""
+        self.server.js_call(self.ref, "updateColumns", *args)
 
 
 __all__ = [
