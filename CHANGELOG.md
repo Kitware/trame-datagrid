@@ -2,6 +2,16 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.1 (2024-06-18)
+
+### Fix
+
+* **sort:** Revert version to @revolist/vue3-datagrid=3.0.97 ([`dd3baac`](https://github.com/Kitware/trame-datagrid/commit/dd3baacc24af1a9052ac96b14312ebaa4b750600))
+
+### Documentation
+
+* **renderer:** Add exemple with custom renderer ([`c392195`](https://github.com/Kitware/trame-datagrid/commit/c3921955f03e6caf08b25f58fe34182a716bc1ba))
+
 ## v0.2.0 (2024-02-01)
 
 ### Feature
