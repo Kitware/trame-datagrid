@@ -18,7 +18,7 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
-    "@revolist/vue3-datagrid": "^3.6.17"
+    "@revolist/vue3-datagrid": "3.0.97"
   },
   "peerDependencies": {
     "vue": "^2.7.0 || >=3.0.0"
