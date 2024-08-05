@@ -26,6 +26,7 @@ COLUMNS = [
         "name": "Red",
         "prop": "custom1",
         "cellTemplate": "trame.utils.datagrid.renderers.red",
+        "columnTemplate": "trame.utils.datagrid.renderers.colRed",
     },
     {
         "name": "Checkbox",

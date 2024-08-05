@@ -18,6 +18,13 @@ window.trame.utils.datagrid = {
         return entries.map(decorateEntry)
     },
     renderers: {
+        colRed(createElement, column) {
+            return createElement('span', {
+                style: {
+                  color: 'red'
+                },
+            }, column.name);
+        },
         red(createElement, props) {
             console.log("red props", props);
             return createElement('span', {
