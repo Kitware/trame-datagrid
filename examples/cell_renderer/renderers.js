@@ -10,6 +10,9 @@ function decorateEntry(input) {
     for (const [key, value] of Object.entries(input)) {
         output[key] = toJSExpression(value);
     }
+    if (output.children) {
+        output.children = output.children.map(decorateEntry);
+    }
     return output;
 }
 

@@ -12,6 +12,7 @@ def create_entry(id):
         "id": id,
         "name": f"name {id}",
         "custom1": f"custom1 {id}",
+        "custom2": f"{id * 10}",
         "check": not (id % 2),
     }
 
@@ -26,6 +27,18 @@ COLUMNS = [
         "name": "Red",
         "prop": "custom1",
         "cellTemplate": "trame.utils.datagrid.renderers.red",
+        "columnTemplate": "trame.utils.datagrid.renderers.colRed",
+    },
+    {
+        "name": "Red Group",
+        "children": [
+            {
+                "name": "Nested Red",
+                "prop": "custom2",
+                "size": 150,
+                "columnTemplate": "trame.utils.datagrid.renderers.colRed",
+            },
+        ],
         "columnTemplate": "trame.utils.datagrid.renderers.colRed",
     },
     {
