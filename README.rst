@@ -1,6 +1,8 @@
-==============
-trame-datagrid
-==============
+.. |pypi_download| image:: https://img.shields.io/pypi/dm/trame-datagrid
+
+==========================================
+trame-datagrid |pypi_download|
+==========================================
 
 Trame widget of the `RevoGrid <https://revolist.github.io/revogrid/>`_ component for vue3.
 
