@@ -1,1 +1,1 @@
-from trame_datagrid.module import *
+from trame_datagrid.module.datagrid import *
