@@ -2,6 +2,20 @@
 
 <!--next-version-placeholder-->
 
+## v0.2.2 (2025-06-04)
+
+### Fix
+
+* **module:** Properly expose trame module ([`d0aa0c0`](https://github.com/Kitware/trame-datagrid/commit/d0aa0c034e519c7e51aca95493bd0172cc188f50))
+
+### Documentation
+
+* Remove roadmap from readme ([`613e545`](https://github.com/Kitware/trame-datagrid/commit/613e5455a9a92c935263c1fa0b337df8dbf31b5d))
+* **js:** List JS dependency ([`95600dc`](https://github.com/Kitware/trame-datagrid/commit/95600dc63e2a452228bd64df56345bd306f6b8b4))
+* Update README.rst ([`31c161f`](https://github.com/Kitware/trame-datagrid/commit/31c161f8a0192a493ba1ef1c06001d2f1533a227))
+* **example:** Add nested columns and fix child columns ([#1](https://github.com/Kitware/trame-datagrid/issues/1)) ([`e367b5b`](https://github.com/Kitware/trame-datagrid/commit/e367b5be584bbdb828b65933fff8967e4f9eff3c))
+* **columnTemplate:** Extend example to show usage ([`9cec5e4`](https://github.com/Kitware/trame-datagrid/commit/9cec5e40327c04da9d5b8217fde7bbb56d942a49))
+
 ## v0.2.1 (2024-06-18)
 
 ### Fix
